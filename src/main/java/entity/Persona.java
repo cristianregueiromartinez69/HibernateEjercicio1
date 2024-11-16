@@ -1,9 +1,6 @@
 package entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 
 import java.math.BigDecimal;
@@ -11,6 +8,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "personas", schema = "public")
 public class Persona {
+
     @Id
     @Column(name = "id", nullable = false)
     private BigDecimal id;
