@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Metodos {
+public class MetodosAnadeObjetos {
 
     public List<Persona> getPersonas() {
         List<Persona> personas = new ArrayList<Persona>();
