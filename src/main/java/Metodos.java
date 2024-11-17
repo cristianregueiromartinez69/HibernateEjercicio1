@@ -4,9 +4,25 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase metodos para la clase personas
+ * @author cristian
+ * @version 1.0
+ */
 public class Metodos {
 
+    /**
+     * Metodo que crea 3 objetos y los mete en una lista de personas
+     * @return la lista de personas
+     */
     public List<Persona> getPersonas() {
+        /*
+          Explicacion:
+          1. Creamos una lista de objetos tipo Persona
+          2. creamos 3 objetos de tipo Persona
+          3. los añadimos a la lista
+          4. devolvemos la lista
+         */
         List<Persona> personas = new ArrayList<>();
 
         Persona persona1 = new Persona();
@@ -34,6 +50,10 @@ public class Metodos {
         return personas;
     }
 
+    /**
+     * Metodo que devuelve un objeto de tipo persona
+     * @return el objeto de tipo persona
+     */
     public Persona updatePersona(){
         Persona persona = new Persona();
         persona.setId(BigDecimal.valueOf(2));
