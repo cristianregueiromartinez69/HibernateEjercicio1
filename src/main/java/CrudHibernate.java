@@ -12,7 +12,7 @@ public class CrudHibernate {
         EntityManagerFactory managerFactory = Persistence.createEntityManagerFactory("default");
         EntityManager em = managerFactory.createEntityManager();
         EntityTransaction tx = em.getTransaction();
-        MetodosAnadeObjetos metodos = new MetodosAnadeObjetos();
+        Metodos metodos = new Metodos();
 
         try{
             tx.begin();
@@ -20,6 +20,24 @@ public class CrudHibernate {
             for(Persona persona : personasList){
                 em.persist(persona);
             }
+            tx.commit();
+        }finally{
+            if(tx.isActive()){
+                tx.rollback();
+            }
+            em.close();
+            managerFactory.close();
+        }
+    }
+
+    public void updateValuesPersonas(Metodos metodos){
+        EntityManagerFactory managerFactory = Persistence.createEntityManagerFactory("default");
+        EntityManager em = managerFactory.createEntityManager();
+        EntityTransaction tx = em.getTransaction();
+
+        try{
+            tx.begin();
+            em.merge(metodos.updatePersona());
             tx.commit();
         }finally{
             if(tx.isActive()){

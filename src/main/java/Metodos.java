@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MetodosAnadeObjetos {
+public class Metodos {
 
     public List<Persona> getPersonas() {
         List<Persona> personas = new ArrayList<Persona>();
@@ -24,7 +24,7 @@ public class MetodosAnadeObjetos {
         Persona persona3 = new Persona();
         persona3.setId(BigDecimal.valueOf(3));
         persona3.setNombre("pedro");
-        persona3.setApellido("aquiño");
+        persona3.setApellido("aquinho");
         persona3.setSalario(BigDecimal.valueOf(1500.6123254));
 
         personas.add(persona1);
@@ -32,6 +32,15 @@ public class MetodosAnadeObjetos {
         personas.add(persona3);
 
         return personas;
+    }
+
+    public Persona updatePersona(){
+        Persona persona = new Persona();
+        persona.setId(BigDecimal.valueOf(2));
+        persona.setNombre("juana");
+        persona.setApellido("gonzalez");
+        persona.setSalario(BigDecimal.valueOf(3200.4500));
+        return persona;
     }
 }
 
