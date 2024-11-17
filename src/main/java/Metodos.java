@@ -7,7 +7,7 @@ import java.util.List;
 public class Metodos {
 
     public List<Persona> getPersonas() {
-        List<Persona> personas = new ArrayList<Persona>();
+        List<Persona> personas = new ArrayList<>();
 
         Persona persona1 = new Persona();
         persona1.setId(BigDecimal.valueOf(1));

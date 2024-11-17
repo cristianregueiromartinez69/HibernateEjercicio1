@@ -1,5 +1,6 @@
 import entity.Persona;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class Main {
@@ -12,6 +13,7 @@ public class Main {
 
         crud.insertValuesPersonas(personas);
         crud.updateValuesPersonas(metodos);
+        crud.deletePersona(BigDecimal.valueOf(3));
 
 
     }
